@@ -1,5 +1,5 @@
 /**
- * Account Interface, from the notes: Personal info, Wallet, GET Cash,
+ * Account Interface, from the notes: Personal info, Wallet, Get Cash,
  * Favorites, Loyalty & rewards, Log out. Payment methods are fake: any
  * Luhn-valid number is accepted (try 4242 4242 4242 4242).
  */
@@ -17,7 +17,7 @@ type Page = 'home' | 'personal' | 'wallet' | 'cash' | 'favorites' | 'loyalty';
 const PAGES: { key: Page; label: string }[] = [
   { key: 'personal', label: 'Personal info' },
   { key: 'wallet', label: 'Wallet' },
-  { key: 'cash', label: 'GET Cash' },
+  { key: 'cash', label: 'Get Cash' },
   { key: 'favorites', label: 'Favorites' },
   { key: 'loyalty', label: 'Loyalty & rewards' },
 ];
@@ -113,7 +113,7 @@ function GetCash() {
   return (
     <View>
       <T style={{ fontSize: 40, fontWeight: '700' }}>{formatMoney(getCashUSD, 'USD')}</T>
-      <T style={styles.sub}>Simulated balance. Pick GET Cash as the payment method at checkout to spend it, or send it to a friend (coming soon).</T>
+      <T style={styles.sub}>Simulated balance. Pick Get Cash as the payment method at checkout to spend it, or send it to a friend (coming soon).</T>
     </View>
   );
 }
@@ -142,7 +142,7 @@ function Personal() {
       {field('Username', username, setUsername, () => username.trim() !== profile.username && updateProfile({ username: username.trim() }), { autoCapitalize: 'none' })}
       {field('Phone', phone, setPhone, () => phone.trim() !== profile.phone && updateProfile({ phone: phone.trim() }), { keyboardType: 'phone-pad' })}
       <TextInput style={[styles.input, { color: colors.muted }]} value={user?.email ?? ''} editable={false} />
-      <T style={styles.sub}>Saved to your GET account.</T>
+      <T style={styles.sub}>Saved to your Get account.</T>
     </View>
   );
 }

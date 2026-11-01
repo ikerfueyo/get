@@ -1,4 +1,4 @@
--- GET: initial schema.
+-- Get: initial schema.
 -- Catalogue tables (stores, products, offers) hold the simulated world
 -- inventory and are readable by anyone. Everything else belongs to a user
 -- and is protected by row level security.

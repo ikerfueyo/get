@@ -382,7 +382,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     profile,
     updateProfile: (patch) => {
       setProfile((p) => ({ ...p, ...patch }));
-      // usernames are unique across GET
+      // usernames are unique across Get
       persist((uid) => remote.updateProfile(uid, patch), patch.username ? `Could not save. The username “${patch.username}” may be taken.` : undefined);
     },
     toast,

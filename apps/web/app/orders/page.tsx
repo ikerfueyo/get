@@ -21,7 +21,7 @@ export default async function Orders() {
       {orders === null ? (
         <p className="note">The API is not reachable. Start it with <code>npm run api</code> (or set <code>API_URL</code>).</p>
       ) : orders.length === 0 ? (
-        <p className="note">No orders yet. Place one from the app with the GET button.</p>
+        <p className="note">No orders yet. Place one from the app with the Get button.</p>
       ) : (
         <table>
           <thead>

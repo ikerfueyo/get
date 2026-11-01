@@ -1,5 +1,5 @@
 /**
- * The Supabase client. GET's catalogue and accounts live in this project;
+ * The Supabase client. Get's catalogue and accounts live in this project;
  * set EXPO_PUBLIC_SUPABASE_URL and EXPO_PUBLIC_SUPABASE_ANON_KEY to point the
  * app at another one. The publishable key is meant to ship in the app: row
  * level security decides what it can read and write.

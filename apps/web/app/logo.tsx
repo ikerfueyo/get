@@ -1,8 +1,8 @@
-/** The blocky GET mark from Sketches/Cover.png (same geometry as the mobile Logo). */
+/** The blocky Get mark from Sketches/Cover.png (same geometry as the mobile Logo). */
 export function Logo({ size = 48, color = '#000' }: { size?: number; color?: string }) {
   const r = (x: number, y: number, w: number, h: number) => <rect x={x} y={y} width={w} height={h} fill={color} />;
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" role="img" aria-label="GET">
+    <svg width={size} height={size} viewBox="0 0 100 100" role="img" aria-label="Get">
       {r(0, 0, 100, 25)}
       {r(0, 25, 0.9, 75)}
       {r(33, 25, 0.9, 75)}

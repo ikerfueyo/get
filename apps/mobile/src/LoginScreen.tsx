@@ -1,5 +1,5 @@
 /**
- * LRI 1. The sketch page is blank, so this keeps to the rest of GET: white
+ * LRI 1. The sketch page is blank, so this keeps to the rest of Get: white
  * page, the block logo, black-outlined fields and one black button.
  * On launch (`intro`) the splash logo slides up into place before the fields
  * fade in; once signed in (`leaving`) the fields fade out, the logo slides back
@@ -164,7 +164,7 @@ export function LoginScreen({ intro, leaving, onLeft }: { intro: boolean; leavin
             <Button label={busy ? '…' : mode === 'sign_in' ? 'Sign in' : 'Create account'} onPress={submit} disabled={busy} style={{ marginTop: 6 }} />
 
             <Pressable onPress={() => switchMode(mode === 'sign_in' ? 'register' : 'sign_in')} style={styles.swap}>
-              <T style={styles.swapText}>{mode === 'sign_in' ? 'New to GET? Register' : 'Have an account? Sign in'}</T>
+              <T style={styles.swapText}>{mode === 'sign_in' ? 'New to Get? Register' : 'Have an account? Sign in'}</T>
             </Pressable>
           </Animated.View>
         </ScrollView>

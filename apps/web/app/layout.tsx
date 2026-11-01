@@ -5,8 +5,8 @@ import { Logo } from './logo';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'GET · Admin',
-  description: 'Simulated inventory, stores and orders behind the GET app.',
+  title: 'Get · Admin',
+  description: 'Simulated inventory, stores and orders behind the Get app.',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body>
         <header className="top">
-          <Link href="/" aria-label="GET home">
+          <Link href="/" aria-label="Get home">
             <Logo size={36} />
           </Link>
           <nav>

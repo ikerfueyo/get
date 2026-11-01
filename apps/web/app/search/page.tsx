@@ -17,7 +17,7 @@ export default async function Search({ searchParams }: Props) {
       <h1>Search</h1>
       <p className="sub">The same optimal-offer engine the app uses: what you pay + your time + waiting + risk (ranking design v1).</p>
       <form className="filters">
-        <input name="q" defaultValue={q} placeholder="Search GET" className="search" autoFocus />
+        <input name="q" defaultValue={q} placeholder="Search Get" className="search" autoFocus />
         <select name="loc" defaultValue={location.id}>
           {DEFAULT_LOCATIONS.map((l) => <option key={l.id} value={l.id}>{l.label} · {l.address}</option>)}
         </select>

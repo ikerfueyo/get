@@ -92,7 +92,7 @@ export function LocationInterface({ top }: { top: number }) {
   const scrollLeft = useRef(0); // where the scrolling part starts inside the strip
   const [menuLeft, setMenuLeft] = useState(0);
 
-  // LI 12 / LI 17: what's typed is looked up worldwide (GET's stores and a few cities first)
+  // LI 12 / LI 17: what's typed is looked up worldwide (Get's stores and a few cities first)
   const [found, setFound] = useState<Place[]>([]);
   const [looking, setLooking] = useState(false);
   const [offline, setOffline] = useState(false);
@@ -457,7 +457,7 @@ export function LocationInterface({ top }: { top: number }) {
             looking ? (
               <ActivityIndicator color={colors.white} style={{ margin: 12 }} />
             ) : offline ? (
-              <T style={styles.listHeader}>Can't search the whole world right now. Showing GET's places.</T>
+              <T style={styles.listHeader}>Can't search the whole world right now. Showing Get's places.</T>
             ) : query.trim().length >= 2 && !results.length ? (
               <T style={styles.listHeader}>No places found</T>
             ) : undefined
@@ -886,7 +886,7 @@ function LocationShare({ loc, onCancel }: { loc: SavedLocation; onCancel: () => 
   const mapView = useRef({ point: { lat: loc.lat, lng: loc.lng }, key: 1, streets: true }).current;
   useEffect(() => {
     const link = `https://maps.google.com/?q=${loc.lat.toFixed(6)},${loc.lng.toFixed(6)}`;
-    Share.share({ title: 'Location from GET', message: [...lines, link].join('\n') })
+    Share.share({ title: 'Location from Get', message: [...lines, link].join('\n') })
       .catch(() => {})
       .finally(onCancel);
     // eslint-disable-next-line react-hooks/exhaustive-deps

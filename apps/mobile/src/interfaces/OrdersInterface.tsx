@@ -256,7 +256,7 @@ function CartSheet({ cart, onClose, onAddItem }: { cart: Cart; onClose: () => vo
         </ScrollView>
 
         <Button
-          label={cart.mode === 'in_store' ? 'Pay with GET' : 'GET'}
+          label={cart.mode === 'in_store' ? 'Pay with Get' : 'Get'}
           onPress={async () => {
             const order = await checkoutCart(cart.id);
             if (order) onClose();

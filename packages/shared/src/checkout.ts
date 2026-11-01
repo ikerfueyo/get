@@ -112,7 +112,7 @@ export function simulateCheckout(input: CheckoutInput, now = new Date()): Order 
     throw new CheckoutError('card_declined', 'The card was declined (simulated).');
   }
   if (pm.kind === 'get_cash' && (input.getCashBalanceUSD ?? 0) < toUSD(total, store.currency)) {
-    throw new CheckoutError('insufficient_get_cash', 'Not enough GET Cash.');
+    throw new CheckoutError('insufficient_get_cash', 'Not enough Get Cash.');
   }
 
   orderCounter += 1;
@@ -135,7 +135,7 @@ export function simulateCheckout(input: CheckoutInput, now = new Date()): Order 
   };
 }
 
-/** GET Cash spent in USD for an order paid with it. */
+/** Get Cash spent in USD for an order paid with it. */
 export function getCashCost(order: Order): number {
   return Math.round(toUSD(order.total, order.currency) * 100) / 100;
 }

@@ -1,7 +1,7 @@
 import Svg, { Rect } from 'react-native-svg';
 
 /**
- * The blocky GET mark from Sketches/Cover.png, redrawn on a 100×100 grid:
+ * The blocky Get mark from Sketches/Cover.png, redrawn on a 100×100 grid:
  * a full-width top bar, two thin verticals, and the four blocks of G and E.
  */
 export function Logo({ size = 96, color = '#000' }: { size?: number; color?: string }) {
