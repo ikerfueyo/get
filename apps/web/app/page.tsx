@@ -15,7 +15,7 @@ export default async function Home() {
       <div className="row" style={{ gap: 24, margin: '12px 0 8px' }}>
         <Logo size={88} />
         <div>
-          <h1>GET</h1>
+          <h1>Get</h1>
           <p className="sub">Anything, anywhere, in one click. This is the operator side of the simulated marketplace.</p>
         </div>
       </div>

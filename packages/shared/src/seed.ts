@@ -21,7 +21,7 @@ export const DEFAULT_LOCATIONS: SavedLocation[] = [
 export const DEMO_PAYMENT_METHODS: PaymentMethod[] = [
   { id: 'pm_visa', kind: 'card', brand: 'Visa', last4: '4242', label: 'Visa ••••4242', expMonth: 12, expYear: 2030 },
   { id: 'pm_mc', kind: 'card', brand: 'Mastercard', last4: '4444', label: 'Mastercard ••••4444', expMonth: 8, expYear: 2029 },
-  { id: 'pm_getcash', kind: 'get_cash', brand: 'GET Cash', last4: '', label: 'GET Cash' },
+  { id: 'pm_getcash', kind: 'get_cash', brand: 'Get Cash', last4: '', label: 'Get Cash' },
 ];
 
 export const DEMO_GET_CASH_USD = 150;

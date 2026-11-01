@@ -1,5 +1,5 @@
 /**
- * Where the API keeps per-user state (orders, cards, GET Cash).
+ * Where the API keeps per-user state (orders, cards, Get Cash).
  * In-memory by default; set SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY +
  * DEMO_USER_ID to also persist simulated orders to Supabase.
  */

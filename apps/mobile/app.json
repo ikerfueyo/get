@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "GET",
+    "name": "Get",
     "slug": "get",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -29,7 +29,7 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "GET uses your location to find the closest, fastest way to get anything."
+          "locationWhenInUsePermission": "Get uses your location to find the closest, fastest way to get anything."
         }
       ],
       [

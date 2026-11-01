@@ -109,11 +109,11 @@ export const SearchInterface = forwardRef<
             value={query}
             onChangeText={setQuery}
             onFocus={() => animateTo(true)}
-            placeholder={assistant ? 'Ask GET… e.g. barbecue for 8 people' : 'Search GET'}
+            placeholder={assistant ? 'Ask Get… e.g. barbecue for 8 people' : 'Search Get'}
             placeholderTextColor="#6B6B6B"
             style={[styles.input, !query && styles.placeholderCenter]}
             returnKeyType="search"
-            accessibilityLabel="Search GET"
+            accessibilityLabel="Search Get"
           />
           {query.length > 0 && (
             <Pressable onPress={() => setQuery('')} hitSlop={8} style={styles.clear}>
@@ -128,7 +128,7 @@ export const SearchInterface = forwardRef<
             setTimeout(() => input.current?.focus(), 50);
           }}
           style={[styles.robot, assistant && { backgroundColor: colors.black }]}
-          accessibilityLabel="GET assistant"
+          accessibilityLabel="Get assistant"
         >
           <RobotIcon size={22} color={assistant ? colors.white : colors.black} />
         </Pressable>
@@ -255,8 +255,8 @@ function OptionRow({ o, onGet, onAdd }: { o: OfferOption; onGet: () => void; onA
       <Pressable onPress={onAdd} style={styles.addBtn} accessibilityLabel="Add to cart">
         <T style={{ fontWeight: '700' }}>+</T>
       </Pressable>
-      <Pressable onPress={onGet} style={styles.getBtn} accessibilityLabel="GET it now">
-        <T style={styles.getText}>GET</T>
+      <Pressable onPress={onGet} style={styles.getBtn} accessibilityLabel="Get it now">
+        <T style={styles.getText}>Get</T>
       </Pressable>
     </View>
   );

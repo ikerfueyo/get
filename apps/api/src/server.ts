@@ -14,5 +14,5 @@ if (!url || !key) {
 const catalog = await fetchCatalog(createClient(url, key, { auth: { persistSession: false } }));
 console.log(`Catalogue: ${catalog.stores.length} stores, ${catalog.products.length} products, ${catalog.offers.length} offers`);
 createApp().listen(port, () => {
-  console.log(`GET API listening on http://localhost:${port}`);
+  console.log(`Get API listening on http://localhost:${port}`);
 });

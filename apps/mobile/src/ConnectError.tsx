@@ -1,4 +1,4 @@
-/** Shown when GET can't reach Supabase at launch: the catalogue only lives there. */
+/** Shown when Get can't reach Supabase at launch: the catalogue only lives there. */
 import { StyleSheet, View } from 'react-native';
 import { Logo } from './components/Logo';
 import { Button, T } from './components/ui';
@@ -8,7 +8,7 @@ export function ConnectError({ onRetry }: { onRetry: () => void }) {
   return (
     <View style={styles.root}>
       <Logo size={72} />
-      <T style={styles.title}>Can't connect to GET</T>
+      <T style={styles.title}>Can't connect to Get</T>
       <T style={styles.sub}>Check your internet connection and try again.</T>
       <Button label="Try again" onPress={onRetry} style={{ alignSelf: 'stretch' }} />
     </View>

@@ -1,5 +1,5 @@
 /**
- * Reads and writes GET's Supabase tables (supabase/migrations). The catalogue
+ * Reads and writes Get's Supabase tables (supabase/migrations). The catalogue
  * is public and loaded through @get/shared; everything else belongs to the
  * signed-in user and row level security keeps it theirs. Rows are mapped to
  * the same types the shared engine uses, so the rest of the app does not know
@@ -80,12 +80,15 @@ const toLocation = (r: Row): SavedLocation => ({
   area: Array.isArray(r.area) ? r.area : undefined,
 });
 
+/** Accounts made before the rename have "GET Cash" saved in their rows. */
+const brandName = (s: string) => s.replace(/\bGET\b/g, 'Get');
+
 const toPayment = (r: Row): PaymentMethod => ({
   id: r.id,
   kind: r.kind,
-  brand: r.brand,
+  brand: brandName(r.brand),
   last4: r.last4,
-  label: r.label,
+  label: brandName(r.label),
   expMonth: r.exp_month ?? undefined,
   expYear: r.exp_year ?? undefined,
 });
@@ -110,7 +113,7 @@ const toOrder = (r: Row): Order => {
     fees: Number(r.fees),
     total: Number(r.total),
     paymentMethodId: pay?.payment_method_id ?? '',
-    paymentLabel: pay?.payment_methods?.label ?? 'GET',
+    paymentLabel: brandName(pay?.payment_methods?.label ?? 'Get'),
     deliverTo: r.deliver_to,
     placedAt: r.placed_at,
     etaAt: r.eta_at,
@@ -135,7 +138,7 @@ const toCart = (r: Row): Cart | null => {
 /**
  * Loads the user's account, creating what a new account starts with: a profile
  * (also for users who signed up before the tables existed), the demo cards and
- * GET Cash, and the demo Home / Work / CDMX locations.
+ * Get Cash, and the demo Home / Work / CDMX locations.
  */
 export async function loadAccount(userId: string, fullName: string): Promise<Account> {
   const s = db();

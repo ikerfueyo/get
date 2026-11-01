@@ -10,7 +10,7 @@ beforeAll(() => loadCatalog(generateCatalog()));
 
 const app = () => createApp(createUserState(), new Persistence('', '', ''));
 
-describe('GET API', () => {
+describe('Get API', () => {
   it('searches near a location', async () => {
     const res = await request(app()).get('/search').query({ q: 'chicken salad', lat: 41.3083, lng: -72.9279 });
     expect(res.status).toBe(200);
@@ -28,7 +28,7 @@ describe('GET API', () => {
     expect(orders.body).toHaveLength(1);
   });
 
-  it('spends GET Cash and rejects invalid cards', async () => {
+  it('spends Get Cash and rejects invalid cards', async () => {
     const a = app();
     const [result] = (await request(a).get('/search').query({ q: 'latte', modes: 'pickup' })).body;
     await request(a).post('/checkout').send({ lines: [{ offerId: result.best.offerId, quantity: 1 }], mode: 'pickup', paymentMethodId: 'pm_getcash' });

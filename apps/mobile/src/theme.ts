@@ -6,7 +6,7 @@ export const colors = {
   white: '#FFFFFF',
   ink: '#111111',
   panel: '#BDBDBD', // open Location, Orders and Account panels
-  field: '#E3E3E3', // "Search GET" field
+  field: '#E3E3E3', // "Search Get" field
   line: '#1A1A1A',
   hairline: '#D0D0D0',
   muted: '#7A7A7A',
@@ -32,7 +32,7 @@ export const colors = {
 export const fonts = {
   // Notes ask for Calibri; it ships on few phones, so fall back to the system sans.
   sans: Platform.select({ web: 'Calibri, Carlito, "Helvetica Neue", Arial, sans-serif', default: undefined }),
-  // The sketches draw "Search GET" in a typewriter face.
+  // The sketches draw "Search Get" in a typewriter face.
   mono: Platform.select({ ios: 'Courier', android: 'monospace', default: '"Courier New", Courier, monospace' }),
 };
 
